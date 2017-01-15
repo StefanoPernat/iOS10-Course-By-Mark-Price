@@ -18,6 +18,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //set content length of the scrollview
+        var contentWidth: CGFloat = 0
+        let scrollWidth: CGFloat = scrollView.frame.size.width
+        let scrollHeight: CGFloat = scrollView.frame.size.height
         
         for num in 0...2 {
             let image = UIImage(named: "icon\(num).png")
@@ -25,12 +32,16 @@ class ViewController: UIViewController {
             images.append(imageView)
             
             // set imageview position inside the scrollview
-            let imageX: CGFloat = view.frame.midX + view.frame.size.width * CGFloat(num)
+            let imageX: CGFloat = (scrollWidth / 2) + scrollWidth * CGFloat(num)
+            contentWidth += imageX
+            
             scrollView.addSubview(imageView)
-            imageView.frame = CGRect(x: imageX - 75, y: (view.frame.height / 2) - 75, width: 150, height: 150)
+            imageView.frame = CGRect(x: imageX - 75, y: (scrollHeight / 2) - 75, width: 150, height: 150)
         }
         
         print("Count: \(images.count)")
+        scrollView.contentSize = CGSize(width: contentWidth, height: scrollHeight)
+        scrollView.clipsToBounds = false
     }
 
     override func didReceiveMemoryWarning() {

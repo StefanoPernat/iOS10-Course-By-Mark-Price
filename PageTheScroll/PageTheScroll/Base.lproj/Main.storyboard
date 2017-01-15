@@ -39,18 +39,20 @@
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-GQ-ABc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="77.5" y="0.0" width="220" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="huC-dL-5gd"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VFe-GQ-ABc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3zG-ze-mfg"/>
                             <constraint firstItem="Scg-Fu-Ane" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BMe-vj-D2E"/>
-                            <constraint firstItem="VFe-GQ-ABc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NQT-wb-EAU"/>
                             <constraint firstItem="Scg-Fu-Ane" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ZqQ-oO-4qz"/>
                             <constraint firstItem="VFe-GQ-ABc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cJu-fG-Ohm"/>
                             <constraint firstItem="J2j-Wr-BmD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fTD-JH-gMd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f8g-u1-Dx7" secondAttribute="bottom" id="fda-Qg-hQq"/>
-                            <constraint firstAttribute="trailing" secondItem="VFe-GQ-ABc" secondAttribute="trailing" id="fjI-NN-0nb"/>
                             <constraint firstAttribute="trailing" secondItem="J2j-Wr-BmD" secondAttribute="trailing" id="is5-dQ-J4h"/>
                             <constraint firstAttribute="trailing" secondItem="f8g-u1-Dx7" secondAttribute="trailing" id="l4i-T6-04y"/>
                             <constraint firstItem="J2j-Wr-BmD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rYQ-lh-RMp"/>
