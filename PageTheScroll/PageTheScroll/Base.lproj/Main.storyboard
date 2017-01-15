@@ -59,6 +59,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VFe-GQ-ABc" secondAttribute="bottom" id="xxs-sv-cou"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="VFe-GQ-ABc" id="RUe-YS-vIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
