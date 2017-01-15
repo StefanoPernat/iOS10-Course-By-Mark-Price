@@ -180,6 +180,9 @@
                                     <constraint firstAttribute="height" constant="45" id="oa8-q6-doV"/>
                                 </constraints>
                                 <state key="normal" title="buyNowBtn" image="buyNowBtn"/>
+                                <connections>
+                                    <segue destination="aqp-By-byy" kind="show" id="tin-f5-j7R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -249,9 +252,37 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="aEH-IA-lWK">
+            <objects>
+                <viewController id="aqp-By-byy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0XY-0t-uDX"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ip-gE-ras"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nj6-SJ-kGG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="fBJ-6F-xmM">
+                                <rect key="frame" x="97" y="243" width="180" height="180"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fBJ-6F-xmM" firstAttribute="centerY" secondItem="nj6-SJ-kGG" secondAttribute="centerY" id="HLa-Gf-RRE"/>
+                            <constraint firstItem="fBJ-6F-xmM" firstAttribute="centerX" secondItem="nj6-SJ-kGG" secondAttribute="centerX" id="QBo-gE-EhV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWH-gj-Y8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
