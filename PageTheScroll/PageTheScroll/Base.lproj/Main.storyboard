@@ -24,6 +24,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sky" translatesAutoresizingMaskIntoConstraints="NO" id="J2j-Wr-BmD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="Scg-Fu-Ane">
                                 <rect key="frame" x="259" y="30" width="100" height="90"/>
@@ -34,18 +35,21 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mountains" translatesAutoresizingMaskIntoConstraints="NO" id="f8g-u1-Dx7">
                                 <rect key="frame" x="0.0" y="477" width="375" height="190"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="190" id="P2f-gw-hTu"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-GQ-ABc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-GQ-ABc">
                                 <rect key="frame" x="77.5" y="0.0" width="220" height="667"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="huC-dL-5gd"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="VFe-GQ-ABc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3zG-ze-mfg"/>
                             <constraint firstItem="Scg-Fu-Ane" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BMe-vj-D2E"/>
@@ -60,12 +64,26 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J2j-Wr-BmD" secondAttribute="bottom" id="x5e-vL-Mwo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VFe-GQ-ABc" secondAttribute="bottom" id="xxs-sv-cou"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SGQ-Kq-g8f" appends="YES" id="YV1-w4-4Yd"/>
+                            <outletCollection property="gestureRecognizers" destination="eNX-uw-JkG" appends="YES" id="6xl-wO-yRO"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="VFe-GQ-ABc" id="RUe-YS-vIJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="SGQ-Kq-g8f">
+                    <connections>
+                        <action selector="detectSwipe:" destination="BYZ-38-t0r" id="JKZ-Y5-3Rp"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="eNX-uw-JkG">
+                    <connections>
+                        <action selector="detectSwipe:" destination="BYZ-38-t0r" id="zif-qn-GkK"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>

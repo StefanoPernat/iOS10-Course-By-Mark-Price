@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
-    
+    let minPage = 0, maxPage = 2
+    var currentPage = 0
     var images = [UIImageView]()
     
     override func viewDidLoad() {
@@ -49,6 +50,32 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func detectSwipe(_ sender: UISwipeGestureRecognizer) {
+        if currentPage < maxPage && sender.direction == UISwipeGestureRecognizerDirection.left {
+            moveScrollView(direction: 1)
+        }
+        
+        if currentPage > minPage && sender.direction == UISwipeGestureRecognizerDirection.right {
+            moveScrollView(direction: -1)
+        }
+    }
 
+    func moveScrollView(direction: Int){
+        currentPage += direction
+        
+        let point: CGPoint = CGPoint(x: scrollView.frame.size.width * CGFloat(currentPage), y: 0.0)
+        scrollView.setContentOffset(point, animated: true)
+        
+        //Create animation for increasing the icon on the screen
+        UIView.animate(withDuration: 0.2) {
+            self.images[self.currentPage].transform = CGAffineTransform.init(scaleX: 1.4, y: 1.4)
+            
+            for x in 0..<self.images.count {
+                if x != self.currentPage {
+                    self.images[x].transform = CGAffineTransform.identity
+                }
+            }
+        }
+    }
 }
 
