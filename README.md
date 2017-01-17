@@ -29,3 +29,9 @@ Implemented basic version of
 
 Used:
 
+- UIScrollView
+- UISwipeGestureRecognizer
+
+Implemented basic version of
+- func viewDidAppear(_ animated: Bool) -> Void
+- func detectSwipe(_ sender: UISwipeGestureRecognizer) -> Void
