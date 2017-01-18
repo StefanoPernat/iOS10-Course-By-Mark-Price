@@ -30,6 +30,20 @@ class MusicListVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func load3rdScreenPressed(_ sender: UIButton) {
+        let songTitle = "Quit Playing Games With My Hearth"
+        performSegue(withIdentifier: "SongVC", sender: songTitle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PlaySongVC {
+            if let song = sender as? String {
+                destination.selectedSong = song
+            }
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
