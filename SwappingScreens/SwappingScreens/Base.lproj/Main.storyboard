@@ -20,11 +20,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7I-c5-zzQ">
+                                <rect key="frame" x="60" y="47" width="254" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="9uY-Mi-0u1"/>
+                                    <constraint firstAttribute="height" constant="30" id="wUx-H0-Bk7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oFq-iY-ynQ">
+                                <rect key="frame" x="60" y="96" width="254" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="EdE-pK-RPU"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tfd-xV-rsP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cd-Ln-J5h">
+                                <rect key="frame" x="149" y="152" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="O0S-WV-r7Y"/>
+                                    <constraint firstAttribute="width" constant="77" id="bt1-rj-ppZ"/>
+                                </constraints>
+                                <state key="normal" title="Login Now!"/>
+                                <connections>
+                                    <segue destination="y9q-ds-ZZo" kind="show" id="L6y-Fe-x9C"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A7I-c5-zzQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="3DU-D7-J6J"/>
+                            <constraint firstItem="6Cd-Ln-J5h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8qW-1G-bT3"/>
+                            <constraint firstItem="6Cd-Ln-J5h" firstAttribute="top" secondItem="oFq-iY-ynQ" secondAttribute="bottom" constant="26" id="9Mp-37-EbA"/>
+                            <constraint firstItem="oFq-iY-ynQ" firstAttribute="top" secondItem="A7I-c5-zzQ" secondAttribute="bottom" constant="19" id="P9K-x9-ksi"/>
+                            <constraint firstItem="A7I-c5-zzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ara-bM-UfO"/>
+                            <constraint firstItem="oFq-iY-ynQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ddq-NT-grd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--Music ListVC-->
+        <scene sceneID="mMR-by-Ry3">
+            <objects>
+                <viewController id="y9q-ds-ZZo" customClass="MusicListVC" customModule="SwappingScreens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p1F-0d-pDE"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Vm-Ge-ZAs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9bN-kJ-eZF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wan-HV-963" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="39"/>
         </scene>
     </scenes>
 </document>
