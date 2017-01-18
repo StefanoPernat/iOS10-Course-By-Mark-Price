@@ -13,7 +13,7 @@ class MusicListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.blue
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +21,14 @@ class MusicListVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // this is for going back to the login screen,
+    // it can be done also with a second segue but this will stack n views one on the top of each other
+    //blowing up the memory,
+    //this is a better way to do it
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
