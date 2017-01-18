@@ -35,3 +35,9 @@ Used:
 Implemented basic version of
 - func viewDidAppear(_ animated: Bool) -> Void
 - func detectSwipe(_ sender: UISwipeGestureRecognizer) -> Void
+
+#### Stackada-Stack
+
+Used:
+
+- StackViews (needs to be refreshed not understood in a good way)
