@@ -11,7 +11,10 @@ import AVFoundation
 
 class RetroCalculatorVC: UIViewController {
 
+    @IBOutlet weak var displayLabel: UILabel!
+    
     var btnSound: AVAudioPlayer!
+    var runningNumber = "" // the number you are typing
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,8 @@ class RetroCalculatorVC: UIViewController {
 
     @IBAction func buttonPressed(sender: UIButton){
         playSound()
+        runningNumber += "\(sender.tag)"
+        displayLabel.text = runningNumber
     }
     
     func playSound(){
