@@ -13,8 +13,18 @@ class RetroCalculatorVC: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
     
+    enum Operation: String {
+        case Divide = "/"
+        case Multiply = "*"
+        case Subtract = "-"
+        case Add = "+"
+        case Empty = "Empty"
+    }
+    
     var btnSound: AVAudioPlayer!
     var runningNumber = "" // the number you are typing
+    var currentOperation = Operation.Empty
+    var leftValStr = "", rightValStr = "", result = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +38,8 @@ class RetroCalculatorVC: UIViewController {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+        
+        displayLabel.text = "0"
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,12 +53,62 @@ class RetroCalculatorVC: UIViewController {
         displayLabel.text = runningNumber
     }
     
+    @IBAction func onDividePressed(sender: UIButton){
+        processOperation(operation: .Divide)
+    }
+    
+    @IBAction func onMultiplyPressed(sender: UIButton){
+        processOperation(operation: .Multiply)
+    }
+    
+    @IBAction func onSubtractPressed(sender: UIButton){
+        processOperation(operation: .Subtract)
+    }
+    
+    @IBAction func onAddPressed(sender: UIButton){
+        processOperation(operation: .Add)
+    }
+    
+    @IBAction func onEqualPressed(sender: UIButton){
+        processOperation(operation: currentOperation)
+    }
+    
     func playSound(){
         if btnSound.isPlaying {
             btnSound.stop()
         }
         
         btnSound.play()
+    }
+    
+    func processOperation(operation: Operation){
+        playSound()
+        if currentOperation != .Empty {
+            if runningNumber != "" {
+                rightValStr = runningNumber
+                runningNumber = ""
+                
+                if currentOperation == .Multiply {
+                    result = "\(Double(leftValStr)! * Double(rightValStr)!)"
+                } else if currentOperation == .Divide {
+                    result = "\(Double(leftValStr)! / Double(rightValStr)!)"
+                } else if currentOperation == .Subtract {
+                    result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                } else if currentOperation == .Add {
+                    result = "\(Double(leftValStr)! + Double(rightValStr)!)"
+                }
+                
+                leftValStr = result
+                displayLabel.text = result
+            }
+            
+            currentOperation = operation
+        } else {
+            //First time an operator has been pressed
+            leftValStr = runningNumber
+            runningNumber = ""
+            currentOperation = operation
+        }
     }
 }
 
