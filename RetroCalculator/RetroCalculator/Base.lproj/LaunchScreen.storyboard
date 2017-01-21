@@ -24,21 +24,43 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchbg" translatesAutoresizingMaskIntoConstraints="NO" id="GMD-xV-jqK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchground" translatesAutoresizingMaskIntoConstraints="NO" id="9mp-Bc-10n">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eyr-gI-0zR">
                                 <rect key="frame" x="0.0" y="390" width="320" height="90"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchground" translatesAutoresizingMaskIntoConstraints="NO" id="9mp-Bc-10n">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="jpg-CZ-98Z"/>
+                                    <constraint firstAttribute="height" constant="90" id="Cp7-ob-A7D"/>
                                 </constraints>
-                            </imageView>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="K4A-B4-cWc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retro-Calc" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-IY-RlT">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="dDb-tN-9I4">
+                                        <rect key="frame" x="0.0" y="150" width="320" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="jtX-Gd-ofH"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9mp-Bc-10n" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="FEL-Q9-uNm"/>
+                            <constraint firstAttribute="trailing" secondItem="K4A-B4-cWc" secondAttribute="trailing" id="4Ka-MD-yYh"/>
+                            <constraint firstItem="K4A-B4-cWc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="6RB-PC-ayg"/>
+                            <constraint firstAttribute="trailing" secondItem="eyr-gI-0zR" secondAttribute="trailing" id="ArD-pJ-dIU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="eyr-gI-0zR" secondAttribute="bottom" id="NOe-iC-pRR"/>
+                            <constraint firstItem="eyr-gI-0zR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="PBN-Yj-eoK"/>
                             <constraint firstAttribute="trailing" secondItem="GMD-xV-jqK" secondAttribute="trailing" id="coG-a6-eHb"/>
-                            <constraint firstAttribute="trailing" secondItem="9mp-Bc-10n" secondAttribute="trailing" id="dYu-7w-P1S"/>
+                            <constraint firstItem="K4A-B4-cWc" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dbH-Af-P7y"/>
                             <constraint firstItem="GMD-xV-jqK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="eMI-cW-TxK"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="GMD-xV-jqK" secondAttribute="bottom" id="kXB-bv-WHG"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9mp-Bc-10n" secondAttribute="bottom" id="r9l-y0-1eA"/>
                             <constraint firstItem="GMD-xV-jqK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ydO-57-fF2"/>
                         </constraints>
                     </view>
@@ -49,7 +71,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Retro-Calc" width="755" height="111"/>
         <image name="launchbg" width="1433" height="957"/>
         <image name="launchground" width="999" height="225"/>
+        <image name="robot" width="786" height="402"/>
     </resources>
 </document>
