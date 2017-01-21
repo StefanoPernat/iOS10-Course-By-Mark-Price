@@ -41,3 +41,22 @@ Implemented basic version of
 Used:
 
 - StackViews (needs to be refreshed not understood in a good way)
+
+#### SwappingScreen
+
+Used
+
+- Segue
+
+Implemented basic version of
+- override func prepare(for segue: UIStoryboardSegue, sender: Any?) called with **performSegue(withIdentifier: "SongVC", sender: songTitle)**
+
+#### RetroCalculator
+
+Used:
+
+- Enum
+- AVAudioPlayer
+- Bundle
+- URL
+- StackView
