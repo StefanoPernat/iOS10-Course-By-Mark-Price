@@ -73,6 +73,11 @@ class RetroCalculatorVC: UIViewController {
         processOperation(operation: currentOperation)
     }
     
+    @IBAction func onClearPressed(sender: UIButton){
+        playSound()
+        performClear()
+    }
+    
     func playSound(){
         if btnSound.isPlaying {
             btnSound.stop()
@@ -109,6 +114,16 @@ class RetroCalculatorVC: UIViewController {
             runningNumber = ""
             currentOperation = operation
         }
+    }
+    
+    func performClear(){
+        displayLabel.text = "0"
+        runningNumber = ""
+        leftValStr = ""
+        rightValStr = ""
+        result = ""
+        currentOperation = .Empty
+        
     }
 }
 
