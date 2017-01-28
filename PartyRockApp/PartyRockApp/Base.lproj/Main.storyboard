@@ -125,6 +125,9 @@
                             <constraint firstAttribute="trailing" secondItem="8Gc-ic-POZ" secondAttribute="trailing" id="ybe-Pa-Agf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="AQr-Ef-MlH" kind="showDetail" identifier="VideoVC" id="CbE-di-XNE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,12 +144,26 @@
                     <view key="view" contentMode="scaleToFill" id="AXw-KQ-hcw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MT6-fL-Vex">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="5GD-60-7KN"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MT6-fL-Vex" firstAttribute="top" secondItem="AXw-KQ-hcw" secondAttribute="top" id="1Sb-19-22g"/>
+                            <constraint firstAttribute="trailing" secondItem="MT6-fL-Vex" secondAttribute="trailing" id="Whb-xh-brk"/>
+                            <constraint firstItem="MT6-fL-Vex" firstAttribute="leading" secondItem="AXw-KQ-hcw" secondAttribute="leading" id="qFi-qg-WBZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahl-8i-mfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="38"/>
+            <point key="canvasLocation" x="909.60000000000002" y="37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
