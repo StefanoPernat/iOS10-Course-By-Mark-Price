@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="still time.ttf">
+            <string>StillTime-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -84,17 +89,21 @@
                                                         <constraint firstAttribute="width" constant="68" id="amf-pG-Nd2"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsD-VD-FWM">
-                                                    <rect key="frame" x="84" y="30" width="167" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where the sun goes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsD-VD-FWM">
+                                                    <rect key="frame" x="84" y="22.5" width="283" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="47" id="cUW-Lg-wVT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="W2Y-ba-zBA" firstAttribute="leading" secondItem="vkP-aP-piu" secondAttribute="leadingMargin" id="EoZ-rM-aHp"/>
+                                                <constraint firstItem="GsD-VD-FWM" firstAttribute="leading" secondItem="W2Y-ba-zBA" secondAttribute="trailing" constant="8" id="Nzo-WQ-XTB"/>
+                                                <constraint firstItem="GsD-VD-FWM" firstAttribute="centerY" secondItem="vkP-aP-piu" secondAttribute="centerY" id="Qus-oA-0Lg"/>
+                                                <constraint firstItem="GsD-VD-FWM" firstAttribute="trailing" secondItem="vkP-aP-piu" secondAttribute="trailingMargin" id="sj4-ol-MyM"/>
                                                 <constraint firstItem="W2Y-ba-zBA" firstAttribute="centerY" secondItem="vkP-aP-piu" secondAttribute="centerY" id="sjM-RM-gRc"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -120,6 +129,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="iWJ-Yq-VJa">
+            <objects>
+                <viewController id="AQr-Ef-MlH" customClass="VideoVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9zL-Mf-aVx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jdi-pY-NMd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AXw-KQ-hcw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahl-8i-mfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="38"/>
         </scene>
     </scenes>
     <resources>
