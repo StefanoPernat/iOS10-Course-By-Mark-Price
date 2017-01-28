@@ -54,14 +54,38 @@
 		205E44FF1E3D207200B45DD1 /* PartyRockApp */ = {
 			isa = PBXGroup;
 			children = (
+				205E45141E3D21CF00B45DD1 /* Model */,
+				205E45131E3D21C500B45DD1 /* View */,
+				205E45121E3D21AF00B45DD1 /* Controller */,
 				205E45001E3D207200B45DD1 /* AppDelegate.swift */,
-				205E45021E3D207200B45DD1 /* MainVC.swift */,
 				205E45041E3D207200B45DD1 /* Main.storyboard */,
 				205E45071E3D207200B45DD1 /* Assets.xcassets */,
 				205E45091E3D207200B45DD1 /* LaunchScreen.storyboard */,
 				205E450C1E3D207200B45DD1 /* Info.plist */,
 			);
 			path = PartyRockApp;
+			sourceTree = "<group>";
+		};
+		205E45121E3D21AF00B45DD1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				205E45021E3D207200B45DD1 /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		205E45131E3D21C500B45DD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		205E45141E3D21CF00B45DD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
